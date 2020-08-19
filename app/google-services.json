@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "2063606319",
+    "firebase_url": "https://by-lotto.firebaseio.com",
+    "project_id": "by-lotto",
+    "storage_bucket": "by-lotto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2063606319:android:59fbca6d7fe14edbd79cda",
+        "android_client_info": {
+          "package_name": "kmong.yeonj.thailottery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2063606319-54o79hiuru4kfn2s3154tc3nbqip4pi3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5fLIT4kM0OPiBXZRKP_j-GNzKP0tAtNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2063606319-54o79hiuru4kfn2s3154tc3nbqip4pi3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

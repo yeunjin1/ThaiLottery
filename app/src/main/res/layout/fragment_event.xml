@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:focusable="true"
+                                                   android:focusableInTouchMode="true"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".EventFragment">
+
+
+    <TextView
+            android:gravity="center"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:text="@string/event_default"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView" android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"/>
+    <androidx.cardview.widget.CardView android:layout_width="170dp"
+                                       android:layout_height="170dp"
+                                       app:cardCornerRadius="85dp"
+                                       android:background="@color/transparent"
+                                       android:layout_marginBottom="8dp"
+                                       app:layout_constraintBottom_toBottomOf="parent"
+                                       app:layout_constraintEnd_toEndOf="parent"
+                                       android:layout_marginEnd="8dp"
+                                       app:layout_constraintStart_toStartOf="parent"
+                                       android:layout_marginStart="8dp" android:id="@+id/cardView"
+                                       app:layout_constraintTop_toBottomOf="@+id/textView"
+                                       app:layout_constraintHorizontal_bias="0.5"
+                                       app:cardElevation="0dp"
+                                       android:layout_marginTop="20dp">
+        <TextView
+                android:id="@+id/resultText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:textStyle="bold"/>
+
+        <in.myinnos.androidscratchcard.ScratchCard android:layout_width="match_parent"
+                                                   android:layout_height="match_parent" android:id="@+id/scratchCoin"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:text="@string/event_done_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDone" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintVertical_bias="0.8" app:layout_constraintHorizontal_bias="0.51"/>
+    <EditText
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/trueMoney"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.58000004"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toStartOf="@+id/editButton"/>
+    <Button
+            android:visibility="invisible"
+            android:text="@string/event_edit_btn"
+            android:background="@drawable/button_background"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_height="0dp"
+            android:id="@+id/editButton"
+            app:layout_constraintTop_toTopOf="@+id/trueMoney" app:layout_constraintBottom_toBottomOf="@+id/trueMoney"
+            app:layout_constraintStart_toEndOf="@+id/trueMoney" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.5" android:textColor="@color/colorPrimary"/>
+    <TextView
+            android:text="@string/event_dialog_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewWin"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/trueMoney" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.94"
+            android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

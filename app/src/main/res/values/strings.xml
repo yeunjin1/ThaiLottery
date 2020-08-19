@@ -1,0 +1,237 @@
+<resources>
+    <string name="base_url">https://limestudio-thailottery.p.rapidapi.com/v1/Results/ThaiLotto/FindDraw/</string>
+    <string name="app_name">BY Lotto (태국어)</string>
+
+
+    <string name="admob_app_id">ca-app-pub-5012635837024056~9435218966</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5012635837024056/2367247730</string>
+    <string name="banner_ad_unit_id_for_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="whole_ad_unit_id">ca-app-pub-5012635837024056/3782796407</string>
+    <string name="whole_ad_unit_id_for_test">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string name="bat"> บาท</string>
+
+    <!--월 바꿔야댐-->
+    <string name="month1">มกราคม</string>
+    <string name="month2">กุมภาพันธ์</string>
+    <string name="month3">มีนาคม</string>
+    <string name="month4">เเมษายน</string>
+    <string name="month5">พฤษภาคม</string>
+    <string name="month6">มิถุนายน</string>
+    <string name="month7">ในกรกฎาคม</string>
+    <string name="month8">สสิงหาคม</string>
+    <string name="month9">กกันยายน</string>
+    <string name="month10">ตุลาคม</string>
+    <string name="month11">พฤศจิกายน</string>
+    <string name="month12">ธธันวาคม</string>
+
+    <!--하단 navigation view-->
+    <string name="title_main">สุ่มหมายเลข</string>
+    <string name="title_result">ตรวจรางวัล สลากกินแบ่งรัฐบาล</string>
+    <string name="title_event">เข้าร่วมรับรางวัล</string>
+    <string name="title_setting">관리자</string>
+    <string name="title_memo">ล็อกเลขเด็ด</string>
+
+    <!--alertdialog-->
+    <string name="alert_ok">ยืนยัน</string>
+    <string name="alert_cancel">ยกเลิก</string>
+
+    <!--랜덤번호 생성 fragment-->
+    <string name="frag1_default">ขูดเลขเด็ด \nที่นี่</string>
+
+    <!--전화번호 인증 fragment-->
+    <string name="alert_field">เติมช่องว่างให้ครบ</string>
+    <string name="permission_deny_msg">ไม่สำเร็จ</string>
+    <string name="alert_success">สำเร็จ</string>
+    <string name="alert_fail">ไม่สำเร็จ</string>
+    <string name="alert_per_deny">ยืนยันการเข้าถึงข้อมูล</string>
+    <string name="alert_sim_error">ไม่สามารถยืนยันหมายเลขโทรศัพท์</string>
+    <string name="phone_msg">กรุณากรอกข้อมูลเพื่อรับรางวัล</string>
+    <string name="phone_name">ชื่อ- นามสกุล</string>
+    <string name="phone_number">หมายเลขโทรศัพท์</string>
+
+    <!--알림-->
+    <string name="alarm_noti_title">แจ้งเตือน</string>
+    <string name="alarm_noti_content">คุณไม่ได้เข้าเยี่ยมชม BYLOTTO เป็นเวลา 7 วัน เข้าชมเพื่อรับรางวัล</string>
+
+    <!--이벤트 fragment-->
+    <string name="event_alert_title">ผลรางวัล</string>
+    <string name="event_win">คุณได้รับรางวัล</string>
+    <string name="event_lose">ลองอีกครั้งภายหลัง</string>
+    <string name="event_done_message"> เข้าร่วมแล้ววันนี้\n ลองอีกครั้งในวันพรุ่งนี้</string>
+    <string name="event_default_message"> ขูดเลข</string>
+    <string name="event_network"> เชื่อมต่อเครือข่ายของคุณ</string>
+    <string name="event_stop"> สิ้นสิ้นการเข้าร่วมรับรางวัล</string>
+    <string name="event_network2"> ตรวจสอบการเชื่อมต่อเครือข่ายของคุณ</string>
+    <string name="event_default"> ขูดเลข</string>
+
+    <!--복권 당첨 결과 fragment-->
+    <string name="prize1">รางวัลที่ 1</string>
+    <string name="prizeFirst3">เลขหน้า 3 ตัว</string>
+    <string name="prizeLast3">เลขท้าย 3 ตัว </string>
+    <string name="prizeLast2">เลขท้าย 2 ตัว</string>
+    <string name="prize1Close">รางวัลข้างเคียงรางวัลที่ 1</string>
+    <string name="prize2">รางวัลที่ 2</string>
+    <string name="prize3">รางวัลที่ 3</string>
+    <string name="prize4">รางวัลที่ 4</string>
+    <string name="prize5">รางวัลที่ 5</string>
+    <string name="result_alert_title"> ผลรางวัล สลากกินแบ่งรัฐบาล</string>
+    <string name="result_alert_message"> ถูกรางวัล</string>
+    <string name="alert_6_msg"> กรอกเลข สลากกินแบ่งรัฐบาล</string>
+    <string name="result_default_msg"> งวดวันที่ กรอกเลขสลาก</string>
+    <string name="result_phone_hint"> กรอกเลขสลากกินแบ่งรัฐบาล</string>
+
+
+    <!--사용자 설정-->
+    <string name="user_setting_title"> ตั้งค่า</string>
+    <string name="user_setting_content"> รับการแจ้งเตือนแบบพุช</string>
+
+    <!--공유하기-->
+    <string name="chooser_title"> แชร์</string>
+
+    <!--관리자페이지 -->
+    <string name="count_update_msg">반영되었습니다</string>
+    <string name="count_update_fail_msg">유효하지 않은 값입니다</string>
+    <string name="setting_list1">이벤트 당첨자 확인</string>
+    <string name="setting_list2">이벤트 당첨 관리</string>
+    <string name="setting_list3">이벤트 기능 사용</string>
+    <string name="count_title1">최대 당첨 개수</string>
+    <string name="count_title2">당첨 비율</string>
+    <string name="btn_edit">수정</string>
+    <string name="event_use">이벤트 기능 사용</string>
+    <string name="network_confirm_msg">네트워크에 연결한후 이용해 주세요</string>
+
+
+    <!--메모 fragment-->
+    <string name="chooser_title2">app share</string>
+    <string name="event_dialog_text">트루머니를 받기위해 번호를 입력하세요</string>
+    <string name="event_edit_btn">등록</string>
+    <string name="event_done_msg">변경되었습니다</string>
+    <string name="result_fail">ลองอีกครั้งภายหลัง</string>
+
+    <string name="alert_add">추가</string>
+    <string name="alert_delete_msg">삭제하시겠습니까?</string>
+    <string name="memo_hint">메모 내용을 입력하세요</string>
+
+
+
+    <string name="menu_appshare">APP SHARE</string>
+    <string name="menu_push">푸시 알림 설정</string>
+    <string name="menu_phone">전화번호 재인증</string>
+
+
+    <string name="thailetter">ตรวจหวย</string>
+
+    <!--&lt;!&ndash;하단 navigation view&ndash;&gt;-->
+    <!--<string name="title_main">번호 받기</string>-->
+    <!--<string name="title_result">당첨 확인</string>-->
+    <!--<string name="title_event">이벤트</string>-->
+    <!--<string name="title_setting">관리자</string>-->
+    <!--<string name="title_memo">메모</string>-->
+
+    <!--&lt;!&ndash;alertdialog&ndash;&gt;-->
+    <!--<string name="alert_ok">확인</string>-->
+    <!--<string name="alert_cancel">취소</string>-->
+
+    <!--&lt;!&ndash;랜덤번호 생성 fragment&ndash;&gt;-->
+    <!--<string name="frag1_default">화면을 문지르세요</string>-->
+
+    <!--&lt;!&ndash;전화번호 인증 fragment&ndash;&gt;-->
+    <!--<string name="alert_field">필드 값을 모두 채워주세요</string>-->
+    <!--<string name="permission_deny_msg">승인 거절됨</string>-->
+    <!--<string name="alert_success">인증성공</string>-->
+    <!--<string name="alert_fail">인증실패</string>-->
+    <!--<string name="alert_per_deny">전화번호 접근 권한을 승인하세요</string>-->
+    <!--<string name="alert_sim_error">전화번호를 가져올수 없습니다</string>-->
+    <!--<string name="phone_msg">기프티콘 수신을 위해 작성해주세요</string>-->
+    <!--<string name="phone_name">이름</string>-->
+    <!--<string name="phone_number">전화번호</string>-->
+
+    <!--&lt;!&ndash;알림&ndash;&gt;-->
+    <!--<string name="alarm_noti_title">알림</string>-->
+    <!--<string name="alarm_noti_content">앱 접속한지 7일이 지났습니다</string>-->
+
+    <!--&lt;!&ndash;이벤트 fragment&ndash;&gt;-->
+    <!--<string name="event_alert_title">이벤트 결과</string>-->
+    <!--<string name="event_win">당첨</string>-->
+    <!--<string name="event_lose">꽝</string>-->
+    <!--<string name="event_done_message">오늘 이미 참여했습니다\n내일 시도하세요</string>-->
+    <!--<string name="event_default_message">아래를 문지르세요</string>-->
+    <!--<string name="event_network">네트워크에 연결해야 이벤트 참여가 가능합니다</string>-->
+    <!--<string name="event_stop">이벤트가 중지되었습니다</string>-->
+    <!--<string name="event_network2">네트워크 연결상태를 확인하세요</string>-->
+    <!--<string name="event_default">아래를 문지르세요</string>-->
+    <!--<string name="event_dialog_text">트루머니를 받기위해 번호를 입력하세요</string>-->
+    <!--<string name="event_edit_btn">등록</string>-->
+    <!--<string name="event_done_msg">변경되었습니다</string>-->
+
+    <!--&lt;!&ndash;복권 당첨 결과 fragment&ndash;&gt;-->
+    <!--<string name="prize1">prize1</string>-->
+    <!--<string name="prizeFirst3">prizeFirst3</string>-->
+    <!--<string name="prizeLast3">prizeLast3</string>-->
+    <!--<string name="prizeLast2">prizeLast2</string>-->
+    <!--<string name="prize1Close">prize1Close</string>-->
+    <!--<string name="prize2">prize2</string>-->
+    <!--<string name="prize3">prize3</string>-->
+    <!--<string name="prize4">prize4</string>-->
+    <!--<string name="prize5">prize5</string>-->
+    <!--<string name="result_alert_title">복권 당첨 결과</string>-->
+    <!--<string name="result_alert_message">당첨</string>-->
+    <!--<string name="alert_6_msg">6자리 수를 입력하세요</string>-->
+    <!--<string name="result_default_msg">회차를 선택해 결과를 확인하세요</string>-->
+    <!--<string name="result_phone_hint">번호를 입력하세요</string>-->
+    <!--<string name="result_fail">낙첨</string>-->
+
+
+    <!--&lt;!&ndash;사용자 설정&ndash;&gt;-->
+    <!--<string name="user_setting_title">설정</string>-->
+    <!--<string name="user_setting_content">푸시 알림 받기</string>-->
+
+    <!--&lt;!&ndash;공유하기&ndash;&gt;-->
+    <!--<string name="chooser_title">번호 공유하기</string>-->
+    <!--<string name="chooser_title2">앱 공유하기</string>-->
+
+    <!--&lt;!&ndash;관리자페이지 &ndash;&gt;-->
+    <!--<string name="count_update_msg">반영되었습니다</string>-->
+    <!--<string name="count_update_fail_msg">유효하지 않은 값입니다</string>-->
+    <!--<string name="setting_list1">이벤트 당첨자 확인</string>-->
+    <!--<string name="setting_list2">이벤트 당첨 관리</string>-->
+    <!--<string name="setting_list3">이벤트 기능 사용</string>-->
+    <!--<string name="count_title1">최대 당첨 개수</string>-->
+    <!--<string name="count_title2">당첨 비율</string>-->
+    <!--<string name="btn_edit">수정</string>-->
+    <!--<string name="event_use">이벤트 기능 사용</string>-->
+    <!--<string name="network_confirm_msg">네트워크에 연결한후 이용해 주세요</string>-->
+
+    <!--&lt;!&ndash;메모 fragment&ndash;&gt;-->
+    <!--<string name="alert_add">추가</string>-->
+    <!--<string name="alert_delete_msg">삭제하시겠습니까?</string>-->
+    <!--<string name="memo_hint">메모 내용을 입력하세요</string>-->
+
+
+    <!--<string name="menu_push">푸시 알림 설정</string>-->
+    <!--<string name="menu_appshare">앱 공유</string>-->
+    <!--<string name="menu_phone">전화번호 재인증</string>-->
+
+
+    <!--<string name="month1">1</string>-->
+    <!--<string name="month2">2</string>-->
+    <!--<string name="month3">3</string>-->
+    <!--<string name="month4">4</string>-->
+    <!--<string name="month5">5</string>-->
+    <!--<string name="month6">6</string>-->
+    <!--<string name="month7">7</string>-->
+    <!--<string name="month8">8</string>-->
+    <!--<string name="month9">9</string>-->
+    <!--<string name="month10">10</string>-->
+    <!--<string name="month11">11</string>-->
+    <!--<string name="month12">12</string>-->
+
+    <!--<string name="chooser_title2">app share</string>-->
+    <!--<string name="event_dialog_text">กรอกเบอร์มือถือ / รหัสลูกค้า</string>-->
+
+    <!--<string name="event_edit_btn">เปลี่ยนแปลง</string>-->
+    <!--<string name="event_done_msg">ยืนยันการเปลี่ยนแปลง</string>-->
+
+</resources>
