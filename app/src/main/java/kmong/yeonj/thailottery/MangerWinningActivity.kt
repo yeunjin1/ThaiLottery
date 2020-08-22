@@ -62,7 +62,7 @@ class MangerWinningActivity : AppCompatActivity() { //이벤트 당첨 확인 �
                         for (i in p0.children) {
                             realm.beginTransaction()
                             val winnerInfo = realm.createObject(WinnerInfo::class.java)
-                            winnerInfo.phoneNumber = i.key.toString()
+                            winnerInfo.phoneNumber = i.child("phoneNumber").value.toString()
                             winnerInfo.name = i.child("userName").value.toString()
                             winnerInfo.money = i.child("trueMoney").value.toString()
                             winnerInfo.date = today.toInt()

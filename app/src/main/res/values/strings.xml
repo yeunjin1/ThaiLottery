@@ -1,6 +1,6 @@
 <resources>
     <string name="base_url">https://limestudio-thailottery.p.rapidapi.com/v1/Results/ThaiLotto/FindDraw/</string>
-    <string name="app_name">BY Lotto (태국어)</string>
+    <string name="app_name">BY Lotto (ล็อตเตอรี่)</string>
 
 
     <string name="admob_app_id">ca-app-pub-5012635837024056~9435218966</string>
@@ -16,15 +16,15 @@
     <string name="month1">มกราคม</string>
     <string name="month2">กุมภาพันธ์</string>
     <string name="month3">มีนาคม</string>
-    <string name="month4">เเมษายน</string>
+    <string name="month4">เมษายน</string>
     <string name="month5">พฤษภาคม</string>
     <string name="month6">มิถุนายน</string>
-    <string name="month7">ในกรกฎาคม</string>
-    <string name="month8">สสิงหาคม</string>
-    <string name="month9">กกันยายน</string>
+    <string name="month7">กรกฎาคม</string>
+    <string name="month8">สิงหาคม</string>
+    <string name="month9">กันยายน</string>
     <string name="month10">ตุลาคม</string>
     <string name="month11">พฤศจิกายน</string>
-    <string name="month12">ธธันวาคม</string>
+    <string name="month12">ธันวาคม</string>
 
     <!--하단 navigation view-->
     <string name="title_main">สุ่มหมายเลข</string>
@@ -105,23 +105,36 @@
 
     <!--메모 fragment-->
     <string name="chooser_title2">app share</string>
-    <string name="event_dialog_text">트루머니를 받기위해 번호를 입력하세요</string>
-    <string name="event_edit_btn">등록</string>
-    <string name="event_done_msg">변경되었습니다</string>
-    <string name="result_fail">ลองอีกครั้งภายหลัง</string>
+    <!--<string name="event_dialog_text">트루머니를 받기위해 번호를 입력하세요</string>-->
+    <!--<string name="event_edit_btn">등록</string>-->
+    <!--<string name="event_done_msg">변경되었습니다</string>-->
+    <!--<string name="result_fail">ลองอีกครั้งภายหลัง</string>-->
 
-    <string name="alert_add">추가</string>
-    <string name="alert_delete_msg">삭제하시겠습니까?</string>
-    <string name="memo_hint">메모 내용을 입력하세요</string>
+    <!--<string name="alert_add">추가</string>-->
+    <!--<string name="alert_delete_msg">삭제하시겠습니까?</string>-->
+    <!--<string name="memo_hint">메모 내용을 입력하세요</string>-->
 
 
 
     <string name="menu_appshare">APP SHARE</string>
-    <string name="menu_push">푸시 알림 설정</string>
-    <string name="menu_phone">전화번호 재인증</string>
-
-
+    <!--<string name="menu_push">푸시 알림 설정</string>-->
+    <!--<string name="menu_phone">전화번호 재인증</string>-->
     <string name="thailetter">ตรวจหวย</string>
+
+
+    <!--추가-->
+    <string name="event_dialog_text">กรอกเบอร์มือถือ/รหัสลูกค้า</string>
+    <string name="event_edit_btn">เพิ่ม</string>
+    <string name="event_done_msg">ยืนยันการเปลี่ยนแปลง</string>
+    <string name="alert_add">เพิ่ม</string>
+    <string name="alert_delete_msg">ต้องการยกเลิก?</string>
+    <string name="memo_hint">บันทึกช่วยจำ</string>
+    <string name="menu_push">ตั้งค่าการแจ้งเตือนแบบพุช</string>
+    <string name="menu_phone">เปลี่ยนเบอร์</string>
+    <string name="alert_success2">เพิ่มสำเร็จ</string>
+    <string name="result_fail">ลองอีกครั้งภายหลัง</string>
+
+
 
     <!--&lt;!&ndash;하단 navigation view&ndash;&gt;-->
     <!--<string name="title_main">번호 받기</string>-->
@@ -235,3 +248,6 @@
     <!--<string name="event_done_msg">ยืนยันการเปลี่ยนแปลง</string>-->
 
 </resources>
+
+
+

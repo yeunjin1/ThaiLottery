@@ -20,7 +20,7 @@ import retrofit2.Response
 class SplashActivity : AppCompatActivity() {
 
     private val SPINNER_COUNT = 30
-    private val ALARM_DAY = 1
+    private val ALARM_DAY = 7
     companion object{
         lateinit var lotteryResult: RealmResults<LotteryInfo>
         lateinit var prizeInfoResult: RealmResults<PrizeInfo>

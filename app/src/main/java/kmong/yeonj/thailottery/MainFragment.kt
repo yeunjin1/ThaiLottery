@@ -91,8 +91,8 @@ class MainFragment : androidx.fragment.app.Fragment() {
 
         }
         refreshButton.setOnClickListener {
-            val fm = fragmentManager!!.beginTransaction()
-            fm.detach(this).attach(this).commit()
+            val fm = (activity as MainActivity).fragmentManager!!.beginTransaction()
+            fm.replace(R.id.frame_layout, MainFragment()).commitAllowingStateLoss()
         }
     }
 

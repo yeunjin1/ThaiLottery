@@ -21,18 +21,20 @@ import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.*
+import com.google.firebase.iid.FirebaseInstanceId
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val ALARM_DAY = 1
 
+    var token = ""
     var phoneNumber = ""
     var userName = ""
     lateinit var database: DatabaseReference
     var status = 0
     lateinit var actionBar: ActionBar
     lateinit var ad:InterstitialAd
-    private val fragmentManager = supportFragmentManager
+    val fragmentManager = supportFragmentManager
     private val fragment1 = MainFragment()
     private val fragment2 = ResultFragment()
     private val fragment3 = EventFragment()
@@ -190,6 +192,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getDataFromFirebase(){
+        //firebase client 고유 토큰 가져오기
+        FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener {
+            if(!it.isSuccessful){
+                Log.d("mytag", "getToken failed")
+            }
+            token = it.result?.token!!
+            Log.d("mytag", "token : " + token)
+        }
+
         val eventRef = database.child("eventUse").child("flag")
         eventRef.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {

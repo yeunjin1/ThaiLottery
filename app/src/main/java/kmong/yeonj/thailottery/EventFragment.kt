@@ -95,7 +95,6 @@ class EventFragment : androidx.fragment.app.Fragment() {
         //당첨 비율, 최대개수, 오늘 당첨자 수 firebase 에서 가져오는 리스너 달기
         super.onCreate(savedInstanceState)
 
-
         mainActivity = activity as MainActivity
         val winningRef = mainActivity.database.child("winningInfo")
         winningRef.child("winningRatio").addListenerForSingleValueEvent( //network 연결 되있을때 실행
@@ -191,20 +190,35 @@ class EventFragment : androidx.fragment.app.Fragment() {
                     var eventDone = false
                     for (i in p0.children) {
                         //phoneNumber -> 기기 id
-                        val result = p0.child(i.key.toString()).child(mainActivity.phoneNumber)
-                        Log.d(
-                            "mytag",
-                            "checkFirebase: eventDone: " + i.key.toString() + " " + result.exists().toString()
-                        )
-                        if (result.exists()) {
-                            if(i.key.toString() == "win"){
-                                eventParResult = "true"
+//                        val result = p0.child(i.key.toString()).child(mainActivity.phoneNumber)
+
+                        //이전에 등록한 전화번호로 참여한 적이 있는지 확인
+                        for(j in i.children){
+                            if(j.child("phoneNumber").value == mainActivity.phoneNumber){
+                                eventDone = true
+                                if(i.key.toString() == "win"){
+                                    eventParResult = "true"
+                                }
+                                else{
+                                    eventParResult = "false"
+                                }
+                                break
                             }
-                            else{
-                                eventParResult = "false"
-                            }
-                            eventDone = true
                         }
+//                        val result = p0.child(i.key.toString()).child(mainActivity.token)
+//                        Log.d(
+//                            "mytag",
+//                            "checkFirebase: eventDone: " + i.key.toString() + " " + result.exists().toString()
+//                        )
+//                        if (result.exists()) {
+//                            if(i.key.toString() == "win"){
+//                                eventParResult = "true"
+//                            }
+//                            else{
+//                                eventParResult = "false"
+//                            }
+//                            eventDone = true
+//                        }
                     }
                     if (eventDone) {
                         MyApplication.prefs.setString("eventParDate", today)
@@ -305,11 +319,11 @@ class EventFragment : androidx.fragment.app.Fragment() {
                                 if(input.text.isNotEmpty()){
                                     MyApplication.prefs.setString("trueMoney", input.text.toString())
                                     editText.setText(input.text.toString())
-                                    editText.isFocusable = false
+//                                    editText.isFocusable = false
                                     val date = LocalDate.now()
                                     val today = date.format(dateForamt)
                                     val eventPushRef = mainActivity.database.child("event").child(today).child("win")
-                                        .child((activity as MainActivity).phoneNumber)
+                                        .child(mainActivity.token)
                                     eventPushRef.child("trueMoney").setValue(input.text.toString())
                                 }
                                 infoText.visibility = View.INVISIBLE
@@ -385,8 +399,7 @@ class EventFragment : androidx.fragment.app.Fragment() {
                 val input = editText.text.toString()
                 val date = LocalDate.now()
                 val today = date.format(dateForamt)
-                val eventPushRef = mainActivity.database.child("event").child(today).child("win")
-                    .child((activity as MainActivity).phoneNumber)
+                val eventPushRef = mainActivity.database.child("event").child(today).child("win").child(mainActivity.token)
                 eventPushRef.child("trueMoney").setValue(input)
                 MyApplication.prefs.setString("trueMoney", input)
 
@@ -409,11 +422,11 @@ class EventFragment : androidx.fragment.app.Fragment() {
         else
             eventStr = "lose"
         val eventPushRef = mainActivity.database.child("event").child(today).child(eventStr)
-            .child((activity as MainActivity).phoneNumber)
+            .child(mainActivity.token)
         eventPushRef.child("userName").setValue(mainActivity.userName)
-        eventPushRef.child("trueMoney").setValue(MyApplication.prefs.getString("trueMoney"))
         eventPushRef.child("timestamp").setValue(System.currentTimeMillis())
+        eventPushRef.child("phoneNumber").setValue(mainActivity.phoneNumber)
+        if(eventStr == "win")
+            eventPushRef.child("trueMoney").setValue(MyApplication.prefs.getString("trueMoney"))
     }
-
-
 }

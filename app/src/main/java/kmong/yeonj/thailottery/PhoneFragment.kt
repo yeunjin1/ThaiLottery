@@ -13,7 +13,6 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -23,7 +22,6 @@ import com.google.firebase.database.ValueEventListener
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
 import kotlinx.android.synthetic.main.activity_main.*
-
 
 
 /**
@@ -94,11 +92,16 @@ class PhoneFragment : Fragment() {
                 var flg = false
                 if(ContextCompat.checkSelfPermission(mainActivity.applicationContext, android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED){
                     if(telManager.simState == TelephonyManager.SIM_STATE_READY){
-                        Toast.makeText(context, telManager.line1Number, Toast.LENGTH_LONG).show()
+//                        Toast.makeText(context, telManager.line1Number, Toast.LENGTH_LONG).show()
                         thisPhoneNumber = telManager.line1Number
-                        Log.d("mytag", "thisPhoneNumber : " + thisPhoneNumber)
+                        if(thisPhoneNumber.startsWith("+")){
+                            Log.d("mytag", "thisPhoneNumber : " + thisPhoneNumber)
+                            thisPhoneNumber = thisPhoneNumber.replace("+", "0")
+                            Log.d("mytag", "thisPhoneNumber : " + thisPhoneNumber)
+                        }
                         if(thisPhoneNumber == phoneText.text.toString().trim()){
                             flg = true
+                            //인증성공
                             msg = context!!.getString(R.string.alert_success)
                             mainActivity.phoneNumber = phoneText.text.toString()
                             mainActivity.userName = nameText.text.toString()
@@ -107,7 +110,7 @@ class PhoneFragment : Fragment() {
 
                             //관리자인지 확인(관리자 모드로 진입하려면 네트워크 켜야됨
                             val managerRef = mainActivity.database.child("managerInfo")
-                            managerRef.addListenerForSingleValueEvent(object :ValueEventListener{
+                            managerRef.addListenerForSingleValueEvent(object : ValueEventListener {
                                 override fun onCancelled(p0: DatabaseError) {
 
                                 }
@@ -124,11 +127,29 @@ class PhoneFragment : Fragment() {
                             })
                         }
                         else{
-                            msg = context!!.getString(R.string.alert_fail) + "abc" + thisPhoneNumber
+                            //얘
+                            if(thisPhoneNumber == "" || thisPhoneNumber == null){
+                                flg = true
+                                msg = context!!.getString(R.string.alert_success2)
+                                mainActivity.phoneNumber = phoneText.text.toString()
+                                mainActivity.userName = nameText.text.toString()
+                                MyApplication.prefs.setString("phoneNumber", phoneText.text.toString())
+                                MyApplication.prefs.setString("userName", nameText.text.toString())
+                            }
+                            else {
+                                msg = context!!.getString(R.string.alert_fail) + " " + thisPhoneNumber
+                            }
                         }
                     }
                     else{
-                        msg = context!!.getString(R.string.alert_sim_error)
+                        //유심인식안됨
+//                        msg = context!!.getString(R.string.alert_sim_error)
+                        flg = true
+                        msg = context!!.getString(R.string.alert_success2)
+                        mainActivity.phoneNumber = phoneText.text.toString()
+                        mainActivity.userName = nameText.text.toString()
+                        MyApplication.prefs.setString("phoneNumber", phoneText.text.toString())
+                        MyApplication.prefs.setString("userName", nameText.text.toString())
                     }
                 }
                 else{
