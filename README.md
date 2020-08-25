@@ -1,5 +1,5 @@
 # ThaiLottery
-태국인들을 위한 안드로이드 로또 앱입니다
+태국인들을 위한 안드로이드 로또 앱입니다  
 
 ## 기술 스택
   + 개발언어 : kotlin
@@ -54,7 +54,7 @@
       + 이벤트 당첨 선물을 받기위한 전화번호 수정
       
 ## 사용한 라이브러리
-  + 이벤트, 번호 생성 페이지의 scratchView
+  + 이벤트, 번호 생성 페이지의 scratchView  
   https://github.com/myinnos/AndroidScratchCard
  
   
