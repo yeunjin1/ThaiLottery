@@ -1,12 +1,18 @@
 # ThaiLottery
-태국인들을 위한 로또 앱입니다.
+태국인들을 위한 안드로이드 로또 앱입니다
+
+## 기술 스택
+  + 개발언어 : kotlin
+  + 서버 : firebase
+  + 데이터베이스 : firebase, realm
+  
 
 ## 스크린샷
 ![합친거](https://user-images.githubusercontent.com/48876807/91184222-58561a00-e727-11ea-8be2-0e7785bf5fd2.png)
 
 
 
-## 페이지 설명
+## 페이지 별 기능 
 ### 1. 로또 번호 확인 페이지
   + 스피너로 날짜를 선택한 후 당첨 번호와 당첨 금액 확인
   + 번호 검색 기능
@@ -46,6 +52,10 @@
       + 플레이스토어 링크 공유
   + 전화번호 재 등록
       + 이벤트 당첨 선물을 받기위한 전화번호 수정
-    
+      
+## 사용한 라이브러리
+  + 이벤트, 번호 생성 페이지의 scratchView
+  https://github.com/myinnos/AndroidScratchCard
+ 
   
   
