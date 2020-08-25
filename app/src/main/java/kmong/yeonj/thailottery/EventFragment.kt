@@ -356,7 +356,7 @@ class EventFragment : androidx.fragment.app.Fragment() {
                                 scratchCoin.visibility = View.INVISIBLE
                                 val input2 = MyApplication.prefs.getString("trueMoney")
                                 editText.setText(input2)
-                                editText.isFocusable = false
+//                                editText.isFocusable = false
                             }
                             val dialog = builder.create()
                             dialog.show()

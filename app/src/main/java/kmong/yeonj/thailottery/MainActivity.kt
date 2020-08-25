@@ -222,6 +222,7 @@ class MainActivity : AppCompatActivity() {
     fun initLayout(){
         val transaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.frame_layout, fragment2).commitAllowingStateLoss()
+        toolbar_title.text = getString(R.string.title_result)
     }
 
     fun initListener(){
