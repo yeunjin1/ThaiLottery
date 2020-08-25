@@ -2,7 +2,8 @@
 태국인들을 위한 로또 앱입니다.
 
 ## 스크린샷
-![합친거](https://user-images.githubusercontent.com/48876807/91178671-710f0180-e720-11ea-973d-b953b416eb72.png)
+![합친거](https://user-images.githubusercontent.com/48876807/91184222-58561a00-e727-11ea-8be2-0e7785bf5fd2.png)
+
 
 
 ## 페이지 설명
