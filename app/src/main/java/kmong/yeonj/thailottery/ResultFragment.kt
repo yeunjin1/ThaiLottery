@@ -43,7 +43,7 @@ class ResultFragment : androidx.fragment.app.Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         lotteryResult = SplashActivity.lotteryResult
-        spinnerAdapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item)
+        spinnerAdapter = ArrayAdapter(context!!, android.R.layout.simple_spinner_dropdown_item)
         for(i in lotteryResult){
             val milsec = i.date.toLong() * 1000
             val date = org.threeten.bp.Instant.ofEpochMilli(milsec).atZone(ZoneId.systemDefault()).toLocalDate()

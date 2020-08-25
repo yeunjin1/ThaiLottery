@@ -137,7 +137,7 @@ class PhoneFragment : Fragment() {
                                 MyApplication.prefs.setString("userName", nameText.text.toString())
                             }
                             else {
-                                msg = context!!.getString(R.string.alert_fail) + " " + thisPhoneNumber
+                                msg = context!!.getString(R.string.alert_fail)
                             }
                         }
                     }
