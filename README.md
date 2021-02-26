@@ -56,6 +56,6 @@
 ## 사용한 라이브러리
   + 이벤트, 번호 생성 페이지의 scratchView  
   https://github.com/myinnos/AndroidScratchCard
- 
   
-  
+## 당첨 번호 api
+  https://rapidapi.com/limestudio/api/thailand-national-lottery
